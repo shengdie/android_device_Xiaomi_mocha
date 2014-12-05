@@ -1,0 +1,22 @@
+#service for shelld
+service shelld /system/xbin/shelld
+    class main
+
+# service for mcd init
+service mcd_init /system/bin/mcd init 4
+    user root
+    group system
+    class main
+    disabled
+    oneshot
+
+on property:init.svc.zygote=running
+    start mcd_init
+
+#service for mcd main service
+service mcd_service /system/bin/mcd
+    class main
+    disabled
+
+on property:sys.boot_completed=1
+    start mcd_service
