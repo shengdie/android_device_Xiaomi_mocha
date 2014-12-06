@@ -27,5 +27,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 13420544
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/Xiaomi/mocha-common/kernel
+BOARD_MKBOOTIMG_ARGS := --dt device/Xiaomi/mocha-common/dt.img
 
 BOARD_HAS_NO_SELECT_BUTTON := true
