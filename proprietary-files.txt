@@ -200,3 +200,13 @@ lib/para_10_08_00_20.so
 lib/para_10_08_00_b0.so
 lib/para_10_09_00_c0.so
 lib/para_10_09_01_c0.so
+lib/modules/mac80211.ko
+lib/modules/baseband_usb_chr.ko
+lib/modules/texfat.ko
+lib/modules/tcrypt.ko
+lib/modules/gspca_main.ko
+lib/modules/raw_ip_net.ko
+vendor/etc/diracmobile.config
+xbin/shelld
+vendor/lib/mediadrm
+vendor/lib/mediadrm/libwvdrmengine.so
