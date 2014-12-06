@@ -1,11 +1,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+#$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/Xiaomi/mocha/mocha-vendor.mk)
 
-#DEVICE_PACKAGE_OVERLAYS += device/Xiaomi/mocha/overlay
+DEVICE_PACKAGE_OVERLAYS += device/Xiaomi/mocha/overlay
 
 #LOCAL_PATH := device/Xiaomi/mocha
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
