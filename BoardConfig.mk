@@ -1,7 +1,9 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/Xiaomi/mocha/BoardConfigVendor.mk
+-include device/Xiaomi/mocha-common/BoardConfigCommon.mk
+
+DEVICE_RESOLUTION := 1536x2048
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -31,3 +33,5 @@ BOARD_MKBOOTIMG_ARGS := --dt device/Xiaomi/mocha-common/dt.img
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+#$(call inherit-product, device/Xiaomi/mocha-common/BoardConfigCommon.mk)
