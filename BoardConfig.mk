@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include device/Xiaomi/mocha-common/BoardConfigCommon.mk
+include device/Xiaomi/mocha-common/BoardConfigCommon.mk
 
 DEVICE_RESOLUTION := 1536x2048
 
@@ -17,7 +17,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := mocha
 
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := "androidboot.selinux=permissive"
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 
@@ -29,9 +29,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 13742637056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/Xiaomi/mocha-common/kernel
-BOARD_MKBOOTIMG_ARGS := --dt device/Xiaomi/mocha-common/dt.img
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/Xiaomi/mocha-common/dt.img --tags_offset 0x00000100
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_RECOVERY_SWIPE := true
 
 #$(call inherit-product, device/Xiaomi/mocha-common/BoardConfigCommon.mk)
